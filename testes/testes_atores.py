@@ -64,7 +64,7 @@ class AtorTestes(TestCase):
 
     def teste_colisao_entre_atores_ativos_com_intervalo(self):
         # Com intervalo 2, diferente do padrão 1, essa colisão deveria acontecer
-        self.assert_colisao_atores_ativos(Ator(2, 2), Ator(2, 4), 2)
+        self.assert_colisao_atores_ativos(Ator(2, 2), Ator(2, 1), 2)
 
     def teste_nao_colisao_entre_atores_distantes(self):
         'Teste de que não há colisão entre atores distantes'
@@ -113,7 +113,7 @@ class AtorTestes(TestCase):
     def assert_colisao_atores_ativos(self, ator, ator2, intervalo=1):
         """
         Se certifica que há colisão entre atores ativos
-        Atenção: Esse não é método de teste porque nao se inicia com prefixo "text".
+        Atenção: Esse não é método de teste porque nao se inicia com prefixo "test".
         Ele serve apenas para encapsular toda lógica de teste de colisão entre dois atores ativos
         """
         # Conferindo status dos dois atores antes da colisão
